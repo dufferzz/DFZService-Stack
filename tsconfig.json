@@ -1,0 +1,33 @@
+{
+	"ts-node": {
+		"files": true
+	},
+	"files": ["src/types/types.ts"],
+	"compilerOptions": {
+		"module": "commonjs",
+		"esModuleInterop": true,
+		"target": "es6",
+		"strict": true,
+		"noImplicitAny": true,
+		"noUnusedLocals": true,
+		"sourceMap": false,
+		"allowJs": true,
+		"outDir": "build",
+		"typeRoots": ["src/types"],
+		"baseUrl": "./",
+		"paths": {
+			"*": ["src/types/*"]
+		}
+	},
+	"include": ["src/**/*"],
+	"exclude": [
+		"node_modules",
+		"node_modules/*",
+
+		"frontend",
+		"frontend/*",
+
+		"build",
+		"build/*"
+	]
+}

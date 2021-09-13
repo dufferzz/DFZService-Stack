@@ -1,0 +1,122 @@
+input,
+select,
+option,
+textarea {
+	min-width: 50px;
+	padding: 0.5rem;
+	border-radius: 5px;
+	outline: none;
+	border: 1px solid #aaa;
+	font-size: 0.95rem;
+}
+
+input:focus {
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.01), 0px 0px 8px rgba(0, 0, 0, 0.2);
+}
+
+tbody tr {
+	transition: background-color 0.2s;
+}
+tbody tr:hover {
+	transition: background-color 0.2s;
+	background-color: rgba(0, 0, 0, 0.1) !important;
+}
+tbody tr:nth-child(odd) {
+	transition: background-color 0.2s;
+	background-color: #ddd;
+}
+table {
+	border-collapse: collapse;
+	border-collapse: collapse;
+}
+
+input {
+	height: 1.5rem;
+}
+label {
+	font-size: 1.1rem;
+	padding-bottom: 0.25rem;
+}
+
+thead {
+	font-size: 1rem;
+}
+
+thead td {
+	padding: 10px 0;
+	font-weight: bold;
+}
+@media only screen and (max-width: 580px) {
+	.hide-sm {
+		display: none;
+	}
+}
+
+@media only screen and (min-width: 580px) {
+	.show-sm {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.hide-md {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 1000px) {
+	.hide-lg {
+		display: none;
+	}
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+textarea {
+	line-height: 1.5rem;
+	font-family: inherit;
+	font-size: 1rem;
+}
+.fade {
+	transition: display ease-in;
+}
+
+.selected {
+	color: orange;
+}
+
+hr {
+	border: 0;
+	height: 1px;
+	background-image: linear-gradient(
+		to right,
+		rgba(0, 0, 0, 0.1),
+		rgba(0, 0, 0, 0.25),
+		rgba(0, 0, 0, 0.1)
+	);
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.swal2-content {
+	padding: 0 !important;
+}
+
+.swal2-popup {
+	padding: 0 !important;
+	padding-bottom: 1rem !important;
+}
+
+select {
+	background-color: white;
+}

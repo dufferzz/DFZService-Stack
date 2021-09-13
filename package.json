@@ -1,0 +1,52 @@
+{
+	"name": "gqlserver",
+	"version": "1.0.0",
+	"description": "DFZ GQL API Server",
+	"main": "server.js",
+	"scripts": {
+		"start": "npx concurrently \"yarn startserver\" \"yarn startclient\"",
+		"startdev": "npx concurrently \"yarn startdevserver\" \"yarn startclient\"",
+		"startclient": "cd frontend; yarn start",
+		"startserver": "yarn build-server && cd build; node server.js",
+		"startdevserver": "cd src; nodemon server.ts",
+		"build-server": "tsc && cp ./src/.env.production ./build/.env"
+	},
+	"author": "Sam Duff",
+	"license": "ISC",
+	"dependencies": {
+		"@fortawesome/fontawesome-svg-core": "^1.2.34",
+		"@fortawesome/free-solid-svg-icons": "^5.15.2",
+		"apollo-server-express": "^2.19.1",
+		"auth0": "^2.32.0",
+		"body-parser": "^1.19.0",
+		"cachegoose": "^8.0.0",
+		"chalk": "^4.1.0",
+		"cors": "^2.8.5",
+		"dayjs": "^1.9.8",
+		"dotenv": "^8.2.0",
+		"express": "^4.17.1",
+		"express-jwt": "^6.0.0",
+		"graphql": "^15.4.0",
+		"graphql-iso-date": "^3.6.1",
+		"graphql-scalar-objectid": "^0.1.2",
+		"graphql-subscriptions": "^1.1.0",
+		"graphql-tools": "^7.0.2",
+		"graphql-upload": "^11.0.0",
+		"helmet": "^4.3.1",
+		"jsonwebtoken": "^8.5.1",
+		"jwks-rsa": "^1.12.0",
+		"mongoose": "^5.11.8",
+		"morgan": "^1.10.0",
+		"yup": "^0.32.8"
+	},
+	"devDependencies": {
+		"@types/auth0": "^2.32.0",
+		"@types/graphql-iso-date": "^3.4.0",
+		"@types/isomorphic-form-data": "^2.0.0",
+		"@types/jsonwebtoken": "^8.5.0",
+		"@types/morgan": "^1.9.2",
+		"@types/node": "^14.14.19",
+		"ts-node": "^9.1.1",
+		"typescript": "^4.1.3"
+	}
+}
